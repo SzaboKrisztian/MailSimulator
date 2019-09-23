@@ -1,11 +1,14 @@
 package dk.kea.stud.chris;
 
 import java.util.Queue;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class MailSender implements Runnable {
+  private final ThreadPoolExecutor threadPool;
   private final Queue<Mail> mailQueue;
 
-  public MailSender(Queue<Mail> mailQueue) {
+  public MailSender(Queue<Mail> mailQueue, ThreadPoolExecutor threadPool) {
+    this.threadPool = threadPool;
     this.mailQueue = mailQueue;
   }
 
@@ -15,7 +18,7 @@ public class MailSender implements Runnable {
     while (true) {
       synchronized (mailQueue) {
         if (!mailQueue.isEmpty()) {
-          new Thread(new MailSenderWorker(mailQueue.remove())).start();
+          threadPool.execute(new MailSenderWorker(mailQueue.remove()));
         }
       }
       try {

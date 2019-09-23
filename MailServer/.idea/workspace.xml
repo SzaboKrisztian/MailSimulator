@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9153ed12-ca4c-45b8-aaf0-815cb35487fc" name="Default Changelist" comment="" />
+    <list default="true" id="9153ed12-ca4c-45b8-aaf0-815cb35487fc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../MailClientSimulator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MailClientSimulator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MailClientSimulator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/dk/kea/stud/chris/MailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/dk/kea/stud/chris/MailSender.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled104/dk/kea/stud/chris/MailServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/dk/kea/stud/chris/MailServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/kea/stud/chris/MailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/kea/stud/chris/MailSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dk/kea/stud/chris/MailServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dk/kea/stud/chris/MailServer.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +24,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1RC9fS2JOdUfxIGUQ9MoyKJsI85" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MailClientSimulator" />
@@ -68,10 +82,22 @@
       <workItem from="1569160314751" duration="4194000" />
       <workItem from="1569167530452" duration="1404000" />
       <workItem from="1569239310951" duration="968000" />
+      <workItem from="1569252470226" duration="1307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

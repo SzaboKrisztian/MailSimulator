@@ -4,13 +4,21 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.*;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class MailServer {
   private final Queue<Mail> mailQueue = new LinkedList<>();
+  private final ThreadPoolExecutor threadPool =
+      (ThreadPoolExecutor) Executors.newFixedThreadPool(16);
   private ServerSocket serverSocket;
 
   public MailServer(int port) throws IOException {
     serverSocket = new ServerSocket(port);
+  }
+
+  public ThreadPoolExecutor getThreadPool() {
+    return this.threadPool;
   }
 
   public Socket getConnection() {
@@ -49,15 +57,15 @@ public class MailServer {
       System.exit(1);
     }
 
-    new Thread(new MailSender(mailServer.getMailQueue())).start();
+    new Thread(new MailSender(mailServer.getMailQueue(), mailServer.getThreadPool())).start();
 
     Socket newConnection;
     System.out.println("Waiting for connections.");
     while (true) {
       newConnection = mailServer.getConnection();
       if (newConnection != null) {
-        ClientHandler client = new ClientHandler(newConnection, mailServer.getMailQueue());
-        new Thread(client).start();
+        mailServer.getThreadPool().execute(
+            new ClientHandler(newConnection, mailServer.getMailQueue()));
       }
     }
   }
