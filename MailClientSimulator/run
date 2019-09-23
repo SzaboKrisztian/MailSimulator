@@ -1,0 +1,2 @@
+!#/usr/bin/env bash
+/usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java -javaagent:/home/chris/bin/idea-IU-192.6262.58/lib/idea_rt.jar=42299:/home/chris/bin/idea-IU-192.6262.58/bin -Dfile.encoding=UTF-8 -classpath /home/chris/Dropbox/IdeaProjects/MailClientSimulator/out/production/MailClientSimulator dk.kea.stud.chris.MailClient
